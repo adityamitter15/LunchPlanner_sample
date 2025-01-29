@@ -1,117 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lunch Planner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f4f4f4;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            font-size: 14px;
+            color: #aaa;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-<h1>Lunch Planner - Submit Your Preferences</h1>
-<form id="plannerForm">
-    <label for="firstChoice">1st Choice:</label>
-    <select id="firstChoice" required>
-        <option value="Friday 1:00 PM">Friday 1:00 PM</option>
-        <option value="Friday 2:00 PM">Friday 2:00 PM</option>
-        <option value="Friday 3:00 PM">Friday 3:00 PM</option>
-        <option value="Friday 4:00 PM">Friday 4:00 PM</option>
-        <option value="Friday 5:00 PM">Friday 5:00 PM</option>
-        <option value="Friday 6:00 PM">Friday 6:00 PM</option>
-        <option value="Friday 7:00 PM">Friday 7:00 PM</option>
-        <option value="Friday 8:00 PM">Friday 8:00 PM</option>
-        <option value="Saturday 1:00 PM">Saturday 1:00 PM</option>
-        <option value="Saturday 2:00 PM">Saturday 2:00 PM</option>
-        <option value="Saturday 3:00 PM">Saturday 3:00 PM</option>
-        <option value="Saturday 4:00 PM">Saturday 4:00 PM</option>
-        <option value="Saturday 5:00 PM">Saturday 5:00 PM</option>
-        <option value="Saturday 6:00 PM">Saturday 6:00 PM</option>
-        <option value="Saturday 7:00 PM">Saturday 7:00 PM</option>
-        <option value="Saturday 8:00 PM">Saturday 8:00 PM</option>
-        <option value="Sunday 1:00 PM">Sunday 1:00 PM</option>
-        <option value="Sunday 2:00 PM">Sunday 2:00 PM</option>
-        <option value="Sunday 3:00 PM">Sunday 3:00 PM</option>
-        <option value="Sunday 4:00 PM">Sunday 4:00 PM</option>
-        <option value="Sunday 5:00 PM">Sunday 5:00 PM</option>
-        <option value="Sunday 6:00 PM">Sunday 6:00 PM</option>
-        <option value="Sunday 7:00 PM">Sunday 7:00 PM</option>
-        <option value="Sunday 8:00 PM">Sunday 8:00 PM</option>
-    </select>
-    <br><br>
-    <label for="secondChoice">2nd Choice:</label>
-    <select id="secondChoice" required>
-        <option value="Friday 1:00 PM">Friday 1:00 PM</option>
-        <option value="Friday 2:00 PM">Friday 2:00 PM</option>
-        <option value="Friday 3:00 PM">Friday 3:00 PM</option>
-        <option value="Friday 4:00 PM">Friday 4:00 PM</option>
-        <option value="Friday 5:00 PM">Friday 5:00 PM</option>
-        <option value="Friday 6:00 PM">Friday 6:00 PM</option>
-        <option value="Friday 7:00 PM">Friday 7:00 PM</option>
-        <option value="Friday 8:00 PM">Friday 8:00 PM</option>
-        <option value="Saturday 1:00 PM">Saturday 1:00 PM</option>
-        <option value="Saturday 2:00 PM">Saturday 2:00 PM</option>
-        <option value="Saturday 3:00 PM">Saturday 3:00 PM</option>
-        <option value="Saturday 4:00 PM">Saturday 4:00 PM</option>
-        <option value="Saturday 5:00 PM">Saturday 5:00 PM</option>
-        <option value="Saturday 6:00 PM">Saturday 6:00 PM</option>
-        <option value="Saturday 7:00 PM">Saturday 7:00 PM</option>
-        <option value="Saturday 8:00 PM">Saturday 8:00 PM</option>
-        <option value="Sunday 1:00 PM">Sunday 1:00 PM</option>
-        <option value="Sunday 2:00 PM">Sunday 2:00 PM</option>
-        <option value="Sunday 3:00 PM">Sunday 3:00 PM</option>
-        <option value="Sunday 4:00 PM">Sunday 4:00 PM</option>
-        <option value="Sunday 5:00 PM">Sunday 5:00 PM</option>
-        <option value="Sunday 6:00 PM">Sunday 6:00 PM</option>
-        <option value="Sunday 7:00 PM">Sunday 7:00 PM</option>
-        <option value="Sunday 8:00 PM">Sunday 8:00 PM</option>
-    </select>
-    <br><br>
-    <label for="thirdChoice">3rd Choice:</label>
-    <select id="thirdChoice" required>
-        <option value="Friday 1:00 PM">Friday 1:00 PM</option>
-        <option value="Friday 2:00 PM">Friday 2:00 PM</option>
-        <option value="Friday 3:00 PM">Friday 3:00 PM</option>
-        <option value="Friday 4:00 PM">Friday 4:00 PM</option>
-        <option value="Friday 5:00 PM">Friday 5:00 PM</option>
-        <option value="Friday 6:00 PM">Friday 6:00 PM</option>
-        <option value="Friday 7:00 PM">Friday 7:00 PM</option>
-        <option value="Friday 8:00 PM">Friday 8:00 PM</option>
-        <option value="Saturday 1:00 PM">Saturday 1:00 PM</option>
-        <option value="Saturday 2:00 PM">Saturday 2:00 PM</option>
-        <option value="Saturday 3:00 PM">Saturday 3:00 PM</option>
-        <option value="Saturday 4:00 PM">Saturday 4:00 PM</option>
-        <option value="Saturday 5:00 PM">Saturday 5:00 PM</option>
-        <option value="Saturday 6:00 PM">Saturday 6:00 PM</option>
-        <option value="Saturday 7:00 PM">Saturday 7:00 PM</option>
-        <option value="Saturday 8:00 PM">Saturday 8:00 PM</option>
-        <option value="Sunday 1:00 PM">Sunday 1:00 PM</option>
-        <option value="Sunday 2:00 PM">Sunday 2:00 PM</option>
-        <option value="Sunday 3:00 PM">Sunday 3:00 PM</option>
-        <option value="Sunday 4:00 PM">Sunday 4:00 PM</option>
-        <option value="Sunday 5:00 PM">Sunday 5:00 PM</option>
-        <option value="Sunday 6:00 PM">Sunday 6:00 PM</option>
-        <option value="Sunday 7:00 PM">Sunday 7:00 PM</option>
-        <option value="Sunday 8:00 PM">Sunday 8:00 PM</option>
-    </select>
-    <br><br>
-    <button type="submit">Submit</button>
-</form>
+<div class="container">
+    <h1>Lunch Planner</h1>
+    <p>
+        Please select your preferred time slots for lunch this weekend.
+        You can choose your 1st, 2nd, and 3rd preferences. We'll use everyone's input to pick the best time!
+    </p>
+    <form action="save_response.php" method="post">
+        <label for="first-choice">1st Choice:</label>
+        <select id="first-choice" name="first-choice" required>
+            <option value="" disabled selected>Select a time</option>
+            <option value="Friday 1:00 PM">Friday 1:00 PM</option>
+            <option value="Friday 2:00 PM">Friday 2:00 PM</option>
+            <option value="Friday 3:00 PM">Friday 3:00 PM</option>
+            <option value="Friday 4:00 PM">Friday 4:00 PM</option>
+            <option value="Friday 5:00 PM">Friday 5:00 PM</option>
+            <option value="Friday 6:00 PM">Friday 6:00 PM</option>
+            <option value="Friday 7:00 PM">Friday 7:00 PM</option>
+            <option value="Friday 8:00 PM">Friday 8:00 PM</option>
+            <option value="Saturday 1:00 PM">Saturday 1:00 PM</option>
+            <option value="Saturday 2:00 PM">Saturday 2:00 PM</option>
+            <option value="Saturday 3:00 PM">Saturday 3:00 PM</option>
+            <option value="Saturday 4:00 PM">Saturday 4:00 PM</option>
+            <option value="Saturday 5:00 PM">Saturday 5:00 PM</option>
+            <option value="Saturday 6:00 PM">Saturday 6:00 PM</option>
+            <option value="Saturday 7:00 PM">Saturday 7:00 PM</option>
+            <option value="Saturday 8:00 PM">Saturday 8:00 PM</option>
+            <option value="Sunday 1:00 PM">Sunday 1:00 PM</option>
+            <option value="Sunday 2:00 PM">Sunday 2:00 PM</option>
+            <option value="Sunday 3:00 PM">Sunday 3:00 PM</option>
+            <option value="Sunday 4:00 PM">Sunday 4:00 PM</option>
+            <option value="Sunday 5:00 PM">Sunday 5:00 PM</option>
+            <option value="Sunday 6:00 PM">Sunday 6:00 PM</option>
+            <option value="Sunday 7:00 PM">Sunday 7:00 PM</option>
+            <option value="Sunday 8:00 PM">Sunday 8:00 PM</option>
+        </select>
 
-<script>
-    document.getElementById('plannerForm').addEventListener('submit', function (event) {
-        event.preventDefault();
+        <label for="second-choice">2nd Choice:</label>
+        <select id="second-choice" name="second-choice" required>
+            <option value="" disabled selected>Select a time</option>
+            <!-- Same options as above -->
+        </select>
 
-        const firstChoice = document.getElementById('firstChoice').value;
-        const secondChoice = document.getElementById('secondChoice').value;
-        const thirdChoice = document.getElementById('thirdChoice').value;
+        <label for="third-choice">3rd Choice:</label>
+        <select id="third-choice" name="third-choice" required>
+            <option value="" disabled selected>Select a time</option>
+            <!-- Same options as above -->
+        </select>
 
-        const response = `${firstChoice},${secondChoice},${thirdChoice}`;
+        <button type="submit">Submit Preferences</button>
+    </form>
 
-        // Simulate saving response by downloading it as a file
-        const blob = new Blob([response], { type: 'text/plain' });
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = 'response.txt';
-        link.click();
-
-        alert('Your response has been saved. Please send the file to the organizer.');
-    });
-</script>
+    <footer>
+        Thank you for participating! We'll let you know the final time soon.
+    </footer>
+</div>
 </body>
 </html>
