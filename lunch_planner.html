@@ -172,5 +172,35 @@
         Thank you for participating! We'll let you know the final time soon.
     </footer>
 </div>
+
+
+<script>
+    function submitResponse() {
+        const firstChoice = document.getElementById("first-choice").value;
+        const secondChoice = document.getElementById("second-choice").value;
+        const thirdChoice = document.getElementById("third-choice").value;
+
+        if (!firstChoice || !secondChoice || !thirdChoice) {
+            alert("Please select all three preferences before submitting.");
+            return;
+        }
+
+        // Save the response locally (for demonstration purposes, replace with a backend endpoint later)
+        const response = { firstChoice, secondChoice, thirdChoice };
+        console.log("Response saved:", response);
+
+        // Simulate saving data by storing in localStorage
+        let responses = JSON.parse(localStorage.getItem("responses")) || [];
+        responses.push(response);
+        localStorage.setItem("responses", JSON.stringify(responses));
+
+        // Show a success message
+        document.getElementById("successMessage").style.display = "block";
+
+        // Clear form after submission
+        document.getElementById("lunchForm").reset();
+    }
+</script>
+
 </body>
 </html>
